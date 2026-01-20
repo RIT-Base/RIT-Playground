@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../components/style.css">
+        <title>RIT Playground</title>
+    </head>
+    <body class="bg-gray-900 text-gray-100 font-sans antialiased">
+
+        <div class="container mx-auto min-h-screen p-6 flex flex-col gap-6">
+            
+            <div class="flex justify-between items-end border-b border-gray-600 pb-4">
+                <h1 class="text-2xl font-semibold tracking-tight">Task Manager</h1>
+                <div class="text-sm text-gray-400">Processes: 4 | CPU: 12% | Memory: 42%</div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden shadow-xl">
+                
+                <div class="grid grid-cols-12 bg-gray-700 px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-400">
+                    <div class="col-span-6">Name</div>
+                    <div class="col-span-2 text-right">Status</div>
+                    <div class="col-span-2 text-right">Memory</div>
+                    <div class="col-span-2 text-right">Action</div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="grid grid-cols-12 px-4 py-3 border-b border-gray-700 hover:bg-gray-750 transition-colors items-center">
+                        <div class="col-span-6 flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <span class="font-medium">Google Chrome</span>
+                        </div>
+                        <div class="col-span-2 text-right text-sm text-green-400">Running</div>
+                        <div class="col-span-2 text-right text-sm font-mono text-gray-300">1,240 MB</div>
+                        <div class="col-span-2 text-right">
+                            <button class="bg-red-900/30 text-red-400 border border-red-800/50 px-3 py-1 rounded text-xs hover:bg-red-600 hover:text-white transition-all">Kill Task</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 px-4 py-3 border-b border-gray-700 hover:bg-gray-750 transition-colors items-center">
+                        <div class="col-span-6 flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <span class="font-medium">Visual Studio Code</span>
+                        </div>
+                        <div class="col-span-2 text-right text-sm text-green-400">Running</div>
+                        <div class="col-span-2 text-right text-sm font-mono text-gray-300">850 MB</div>
+                        <div class="col-span-2 text-right">
+                            <button class="bg-red-900/30 text-red-400 border border-red-800/50 px-3 py-1 rounded text-xs hover:bg-red-600 hover:text-white transition-all">Kill Task</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 px-4 py-3 border-b border-gray-700 hover:bg-gray-750 transition-colors items-center">
+                        <div class="col-span-6 flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                            <span class="font-medium">Docker Desktop</span>
+                        </div>
+                        <div class="col-span-2 text-right text-sm text-yellow-400">High Disk</div>
+                        <div class="col-span-2 text-right text-sm font-mono text-gray-300">2,100 MB</div>
+                        <div class="col-span-2 text-right">
+                            <button class="bg-red-900/30 text-red-400 border border-red-800/50 px-3 py-1 rounded text-xs hover:bg-red-600 hover:text-white transition-all">Kill Task</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 px-4 py-3 hover:bg-gray-750 transition-colors items-center">
+                        <div class="col-span-6 flex items-center gap-3">
+                            <div class="w-2 h-2 rounded-full bg-gray-500"></div>
+                            <span class="font-medium text-gray-400">Spotify (Suspended)</span>
+                        </div>
+                        <div class="col-span-2 text-right text-sm text-gray-500">Idle</div>
+                        <div class="col-span-2 text-right text-sm font-mono text-gray-500">12 MB</div>
+                        <div class="col-span-2 text-right">
+                            <button class="bg-red-900/30 text-red-400 border border-red-800/50 px-3 py-1 rounded text-xs hover:bg-red-600 hover:text-white transition-all">Kill Task</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mt-auto py-4 text-xs text-gray-500 border-t border-gray-800">
+                Performance: Up time: 04:22:15 | Kernel: 5.15.0-generic
+            </div>
+        </div>
+
+    </body>
+</html>
