@@ -2,3 +2,4 @@ node_modules/
 backup.html
 backup.js
 .vite
+downloader.py
