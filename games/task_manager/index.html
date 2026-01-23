@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../components/style.css">
+        <script src="app.js"></script>
+        <title>RIT Playground</title>
+    </head>
+    <body class="bg-gray-900 text-gray-100 font-sans antialiased">
+
+        <div class="container mx-auto min-h-screen p-6 flex flex-col gap-6">
+            
+            <div class="flex justify-between items-end border-b border-gray-600 pb-4">
+                <h1 class="text-2xl font-semibold tracking-tight">Task Manager</h1>
+                <div class="text-sm text-gray-400">
+                    <span id="total-proc">Processes: 0</span> | 
+                    <span>CPU: 12% </span> |
+                    <span id="total-ram">0 MB / 16384 MB</span>  
+                </div>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden shadow-xl">
+                
+                <div class="grid grid-cols-12 bg-gray-700 px-4 py-2 text-xs font-bold uppercase tracking-wider text-gray-400">
+                    <div class="col-span-6">Name</div>
+                    <div class="col-span-2 text-right">Status</div>
+                    <div class="col-span-2 text-right">Memory</div>
+                    <div class="col-span-2 text-right">Action</div>
+                </div>
+
+               <div id="start-game" class="flex justify-center items-center p-8">
+                    <button 
+                        class="group relative flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all active:scale-95"
+                        onclick="startGame()"
+                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        
+                        <span class="tracking-wider uppercase text-sm">Play Game</span>
+
+                        <div class="absolute inset-0 rounded-lg bg-blue-400 opacity-0 group-hover:opacity-20 blur-md transition-opacity"></div>
+                    </button>
+                </div>
+
+                <div id="task-manager" class="flex flex-col">
+                    
+                </div>
+            </div>
+
+            <div class="mt-auto py-4 text-xs text-gray-500 border-t border-gray-800">
+                Performance: Up time: 04:22:15 | Kernel: 5.15.0-generic
+            </div>
+        </div>
+
+    </body>
+</html>
