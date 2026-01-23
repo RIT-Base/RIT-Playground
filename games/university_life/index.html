@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIT Playground</title>
+    <link rel="stylesheet" href="../components/style.css">
+     <link rel="icon" href="https://avatars.githubusercontent.com/u/202061261?s=400&u=80f9d7669e799d3be3a78575889b4ef55a7ce77b&v=4" type="image/png">
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; background-color: #050505; }
+        
+        /* Preloader Styles */
+        #preloader {
+            position: fixed; inset: 0; z-index: 9999;
+            background-color: #000; color: white;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            transition: opacity 1s ease-out, visibility 1s ease-out;
+        }
+        .loader-spinner {
+            width: 50px; height: 50px; border: 4px solid #333;
+            border-top: 4px solid #fff; border-radius: 50%;
+            animation: spin 1s linear infinite; margin-bottom: 20px;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Animasi Mengambang Halus & Random */
+        .float-card { transition: transform 0.5s ease; }
+        .float-card:hover { transform: scale(1.05) rotate(0deg) !important; z-index: 50; }
+        
+        /* Layer Background Cross-fade */
+        .bg-layer {
+            position: fixed; inset: 0; z-index: 0;
+            background-size: cover; background-position: center; background-repeat: no-repeat;
+            transition: opacity 1.5s ease-in-out;
+        }
+        /* Overlay gelap di atas background */
+        .bg-overlay {
+            position: fixed; inset: 0; z-index: 1;
+            background: rgba(0,0,0,0.6); pointer-events: none;
+        }
+
+        /* Hide scrollbar */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+    </style>
+</head>
+<body class="text-white overflow-hidden"> <div id="preloader">
+        <div class="loader-spinner"></div>
+        <h2 class="text-xl font-bold tracking-widest animate-pulse">MEMUAT KENANGAN...</h2>
+        <p id="loading-text" class="text-xs text-gray-500 mt-2">Menyiapkan semester 1</p>
+    </div>
+
+    <div id="bg-back" class="bg-layer opacity-0"></div> <div id="bg-front" class="bg-layer opacity-100"></div> <div class="bg-overlay"></div> <div class="fixed top-0 left-0 w-full h-32 bg-gradient-to-b from-black/90 to-transparent z-10 pointer-events-none"></div>
+    <div class="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none"></div>
+
+    <div class="fixed top-6 right-6 z-50 mix-blend-difference">
+        <div class="border border-white/30 px-4 py-2 rounded-full backdrop-blur-md">
+            <span id="semester-indicator" class="font-bold font-mono text-lg md:text-xl text-white tracking-widest uppercase">Loading...</span>
+        </div>
+    </div>
+
+    <div class="relative w-full z-20">
+        
+        <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 relative mb-20">
+            <span class="inline-block py-1 px-3 rounded-full border border-white/30 text-xs font-bold tracking-[0.3em] mb-6 uppercase">RIT Playground</span>
+            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-tight tracking-tighter drop-shadow-2xl">
+                NGINTIP<br>KEHIDUPAN<br>KAMPUS
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 max-w-xl mx-auto leading-relaxed font-light drop-shadow-md">
+                Sebuah album kenangan interaktif.<br>Scroll untuk membuka lembaran semester.
+            </p>
+            <div class="absolute bottom-10 animate-bounce text-2xl opacity-70">↓ MULAI PERJALANAN ↓</div>
+        </header>
+
+        <main id="game-world" class="pb-40 px-4 md:px-10 overflow-x-hidden">
+            </main>
+
+        <footer class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-black relative">
+            <div class="max-w-4xl z-50">
+                <div class="text-8xl mb-6">🎓</div>
+                <h2 class="text-4xl md:text-7xl font-bold mb-8 tracking-tight">Happy Graduation!</h2>
+                <p class="text-xl md:text-2xl leading-relaxed mb-12 font-medium text-gray-600">
+                    "Gelar hanyalah pintu masuk.<br>Mental bajamu adalah kuncinya."
+                </p>
+                <a href="../../index.html" class="inline-block px-10 py-4 bg-black text-white rounded-full font-bold hover:scale-105 transition-transform">
+                    Kembali ke Menu Utama
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>

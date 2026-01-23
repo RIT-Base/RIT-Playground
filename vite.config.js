@@ -10,6 +10,7 @@ export default defineConfig({
         task_manager: resolve(__dirname, 'games/task_manager/index.html'),
         the_deadliner: resolve(__dirname, 'games/the_deadliner/index.html'),
         site_inspectore: resolve(__dirname, 'games/site_inspector/index.html'),
+        university_life: resolve(__dirname, 'games/university_life/index.html'),
       },
     },
   },
