@@ -263,9 +263,14 @@ function updateMemory() {
 // setInterval(updateMemory, 2000);
 
 function startGame() {
-    play = document.getElementById('start-game');
+    const play = document.getElementById('start-game');
     play.remove();
     spawn();
     setInterval(spawn, 6000);
     setInterval(updateMemory, 2000);
 }
+
+window.startGame = startGame;
+window.kill = kill;
+window.closeEvent = closeEvent;
+window.executeKill = executeKill;   
