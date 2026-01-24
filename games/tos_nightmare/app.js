@@ -390,7 +390,7 @@ const levels = {
                 <div class="bg-gray-800 p-4 rounded-t-xl border border-gray-700 flex justify-between items-center">
                     <div>
                         <h2 class="text-lg font-bold text-green-500 font-mono">>>> SYSTEM_LOG_DUMP</h2>
-                        <p class="text-xs text-gray-400">GUI failed to load. Manual override required.</p>
+                        <p class="text-xs text-gray-400">GUI failed to load. Manual override required. Cari text yang menandakan perintah setuju</p>
                     </div>
                     <div class="animate-pulse w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
@@ -696,22 +696,25 @@ const levels = {
     // LEVEL 8: THE TYPO (LONG & ABSURD)
     8: {
         render: () => `
-            <div class="flex flex-col justify-center h-full fade-in">
-                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6">
-                    <div class="text-4xl mb-2 text-center">📜</div>
+            <div class="flex flex-col justify-center h-full fade-in px-4">
+                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 shadow-2xl">
+                    <div class="text-4xl mb-2 text-center animate-bounce">📜</div>
                     <h2 class="text-lg font-bold mb-2 text-center text-gray-200">SUMPAH DIGITAL</h2>
-                    <p class="text-xs text-gray-400 mb-4 text-center">
-                        Ketik kalimat di bawah ini dengan <strong>TEPAT (100%)</strong> untuk membuktikan keseriusan Anda.
+                    <p class="text-xs text-gray-400 mb-4 text-center leading-relaxed">
+                        Ketik kalimat di bawah ini dengan <strong>TEPAT (100%)</strong>. <br>
+                        <span class="text-red-400">Dilarang Copy-Paste atau pakai Autocomplete!</span>
                     </p>
 
-                    <div class="bg-black p-3 rounded mb-4 text-center border border-gray-600 relative group">
-                        <p class="text-yellow-400 font-mono text-sm leading-relaxed select-all" id="target-text">Sumpah saya rela nilai D kalau tidak menyelesaikan game ini</p>
-                        <div class="absolute top-0 right-0 p-1 text-[10px] text-gray-600">No Copy-Paste</div>
+                    <div class="bg-black p-4 rounded mb-6 text-center border border-gray-600 relative group">
+                        <p class="text-yellow-400 font-mono text-sm leading-relaxed select-none pointer-events-none" id="target-text">Sumpah saya rela nilai D kalau tidak menyelesaikan game ini</p>
                     </div>
 
-                    <textarea id="long-input" rows="3" class="w-full bg-gray-700 text-white p-3 rounded border-2 border-transparent focus:border-yellow-500 focus:outline-none text-sm font-mono placeholder-gray-500" placeholder="Ketik di sini..."></textarea>
+                    <textarea id="long-input" rows="3" 
+                        autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                        class="w-full bg-gray-700 text-white p-3 rounded border-2 border-gray-600 focus:border-yellow-500 focus:outline-none text-sm font-mono placeholder-gray-500 transition-colors" 
+                        placeholder="Ketik manual di sini..."></textarea>
 
-                    <button id="btn-lvl8" disabled class="w-full bg-yellow-600 mt-4 text-white py-3 rounded font-bold disabled:bg-gray-700 disabled:text-gray-500 disabled:cursor-not-allowed transition-all opacity-50">
+                    <button id="btn-lvl8" disabled class="w-full bg-yellow-600 mt-4 text-white py-3 rounded font-bold disabled:bg-gray-700 disabled:text-gray-500 disabled:cursor-not-allowed transition-all opacity-50 shadow-lg">
                         SAYA BERSUMPAH
                     </button>
                 </div>
@@ -721,24 +724,54 @@ const levels = {
             const input = document.getElementById('long-input');
             const btn = document.getElementById('btn-lvl8');
             const target = "Sumpah saya rela nilai D kalau tidak menyelesaikan game ini";
+            
+            // Simpan nilai terakhir untuk fitur 'Undo' kalau user nge-paste
+            let lastValue = "";
 
-            // Mencegah Paste
+            // 1. Mencegah Event Paste Standar (Desktop/Context Menu)
             input.addEventListener('paste', (e) => {
                 e.preventDefault();
                 takeDamage("JANGAN CURANG! KETIK MANUAL!");
             });
 
-            input.addEventListener('input', () => {
-                const val = input.value;
-                
-                if (val === target) {
-                    input.classList.add('border-green-500');
+            // 2. Mencegah Drag-and-Drop text
+            input.addEventListener('drop', (e) => {
+                e.preventDefault();
+            });
+
+            // 3. Logic Input Utama + Anti-Burst (Mobile Protection)
+            input.addEventListener('input', (e) => {
+                const currentVal = input.value;
+                const diff = currentVal.length - lastValue.length;
+
+                // DETEKSI KECURANGAN:
+                // Jika teks bertambah lebih dari 1 karakter dalam satu event input,
+                // Berarti itu hasil Paste atau Autocomplete Keyboard.
+                // (Kecuali user menghapus teks, diff akan negatif)
+                if (diff > 1) {
+                    // Revert ke nilai sebelumnya (Batalkan paste)
+                    input.value = lastValue;
+                    takeDamage("Eits! Terdeteksi Paste/Autocomplete. Ketik satu-satu!");
+                    
+                    // Efek visual error
+                    input.classList.add('bg-red-900');
+                    setTimeout(() => input.classList.remove('bg-red-900'), 200);
+                    return;
+                }
+
+                // Update lastValue jika lolos validasi
+                lastValue = currentVal;
+
+                // Cek Kesesuaian Teks
+                if (currentVal === target) {
+                    input.classList.add('border-green-500', 'bg-gray-800');
+                    input.classList.remove('border-gray-600', 'border-yellow-500');
                     btn.disabled = false;
                     btn.classList.remove('opacity-50');
                 } else {
                     btn.disabled = true;
                     btn.classList.add('opacity-50');
-                    input.classList.remove('border-green-500');
+                    input.classList.remove('border-green-500', 'bg-gray-800');
                 }
             });
 
