@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ToS: The Nightmare</title>
+    <link rel="stylesheet" href="../components/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'JetBrains Mono', monospace; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 h-[100dvh] w-full overflow-hidden flex flex-col items-center justify-center selection:bg-red-500 selection:text-white">
+
+    <div class="fixed top-0 w-full max-w-md p-4 flex justify-between items-center z-10 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="flex flex-col">
+            <span class="text-[10px] text-gray-500 uppercase tracking-widest">Current Level</span>
+            <span id="level-indicator" class="text-xl font-bold text-blue-400">1</span>
+        </div>
+        <div class="flex items-center gap-2 bg-gray-800 px-3 py-1 rounded-full border border-gray-700">
+            <span class="text-[10px] text-gray-400 uppercase">Lives:</span>
+            <div id="lives-display" class="tracking-widest">❤️❤️❤️</div>
+        </div>
+    </div>
+
+    <main id="game-area" class="w-full max-w-md h-full flex flex-col p-4 pt-20 pb-6 relative">
+        </main>
+
+    <div id="toast" class="fixed bottom-10 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-2 rounded shadow-lg text-xs font-bold opacity-0 transition-opacity duration-300 pointer-events-none z-50 text-center w-max max-w-[90%]">
+        Error Message Here
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
