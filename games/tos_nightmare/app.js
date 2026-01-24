@@ -85,15 +85,24 @@ const levels = {
                     <p class="text-sm text-gray-300 mb-4 font-bold">Selamat datang. Baca dulu ya.</p>
                     
                     <div id="tos-scroll" class="legal-scroll flex-grow overflow-y-auto bg-gray-900 p-3 rounded border border-gray-700 text-xs text-gray-400 leading-relaxed font-mono">
-                        <p class="mb-4">PASAL 1. Dengan menggunakan layanan ini, Anda setuju bahwa kami tidak bertanggung jawab atas hilangnya waktu Anda.</p>
-                        <p class="mb-4">PASAL 2. Scroll terus ke bawah. Jangan malas.</p>
-                        <p class="mb-4">PASAL 3. Dokumen ini sengaja dibuat panjang agar Anda merasa seperti sedang membaca sesuatu yang penting, padahal isinya hanya Lorem Ipsum versi bahasa Indonesia.</p>
-                        <p class="mb-4">PASAL 4. Jika Anda membaca ini, selamat, Anda orang yang teliti. Tapi tombolnya masih di bawah.</p>
-                        <p class="mb-4">PASAL 5. Hampir sampai...</p>
-                        <p class="mb-4">PASAL 6. Sedikit lagi...</p>
-                        <p class="mb-4">PASAL 7. Pihak kami berhak meminta traktir kopi kapan saja.</p>
-                        <p class="mb-4">PASAL 8. Terus gulir...</p>
-                        <p class="mb-4">PASAL 9. INI ADALAH AKHIR DOKUMEN.</p>
+                        <p class="mb-4"><strong>PASAL 1 (KETENTUAN UMUM):</strong> Dengan membaca kalimat ini, Anda menyadari bahwa Anda sedang membuang waktu berharga yang seharusnya bisa digunakan untuk mengerjakan revisi skripsi atau menamatkan backlog game di Steam.</p>
+                        <p class="mb-4"><strong>PASAL 2 (HAK DEVELOPER):</strong> Developer berhak untuk mengubah aturan ini sesuka hati, tergantung suasana hati (mood), cuaca di Bandung, dan ketersediaan kopi di meja kerja.</p>
+                        <p class="mb-4"><strong>PASAL 3 (TENTANG SCROLLING):</strong> Kami tahu jempol Anda mulai lelah. Tapi percayalah, olahraga jari itu penting untuk mencegah kram saat <em>coding</em> nanti.</p>
+                        <p class="mb-4"><strong>PASAL 4.04 (NOT FOUND):</strong> Pasal ini tidak ditemukan. Silakan refresh browser Anda atau hubungi admin jika Anda peduli (padahal admin juga tidak peduli).</p>
+                        <p class="mb-4"><strong>PASAL 5 (DISCLAIMER BATERAI):</strong> Kami tidak bertanggung jawab jika baterai HP Anda habis saat membaca dokumen ini. Siapa suruh lupa bawa powerbank?</p>
+                        <p class="mb-4"><strong>PASAL 6:</strong> Apakah Anda masih membaca? Wow. Dedikasi Anda luar biasa. Seharusnya Anda membaca jurnal penelitian sedetail ini.</p>
+                        <p class="mb-4"><strong>PASAL 7 (FORCE MAJEURE):</strong> Perjanjian ini batal demi hukum jika terjadi serangan alien, kiamat zombie, atau jika dosen pembimbing tiba-tiba membalas chat di hari Minggu.</p>
+                        <p class="mb-4"><strong>PASAL 8 s/d 15 (DILOMPATI):</strong> Pasal-pasal ini sengaja dihapus karena isinya terlalu membosankan, bahkan bagi lawyer sekalipun. Anggap saja isinya tentang cookie, data, dan hal-hal membosankan lainnya.</p>
+                        <p class="mb-4"><strong>PASAL 16 (PENGAKUAN DOSA):</strong> Sebenarnya teks ini dibuat jam 3 pagi sambil menahan kantuk. Jadi kalau ada <em>typo</em>, harap dimaklumi. Manusia tempatnya salah, GitHub tempatnya menaruh kesalahan itu.</p>
+                        <p class="mb-4"><strong>PASAL 17:</strong> Pihak Pertama (Kami) berhak mengambil satu potong gorengan milik Pihak Kedua (Anda) jika kita bertemu secara fisik di kantin.</p>
+                        <p class="mb-4"><strong>PASAL 18 (KLARIFIKASI):</strong> Tombol "Setuju" belum terlihat, kan? Sabar. Orang sabar disayang Tuhan, orang tidak sabar biasanya koneksi internetnya lemot.</p>
+                        <p class="mb-4"><strong>PASAL 19:</strong> Lorem ipsum dolor sit amet... Ah sudahlah, saya tahu Anda tidak bisa bahasa Latin. Intinya: Scroll lagi.</p>
+                        <p class="mb-4"><strong>PASAL 20:</strong> Ini adalah ujian kesabaran. Anggap saja ini simulasi mengantri di birokrasi pemerintahan, tapi versi digital dan tanpa perlu fotokopi KTP.</p>
+                        <p class="mb-4"><strong>PASAL 21 (PRIVASI):</strong> Kami berjanji tidak akan menjual data Anda, kecuali ada yang menawar dengan harga sangat tinggi. (Bercanda. Atau tidak? Hmmm).</p>
+                        <p class="mb-4"><strong>PASAL 22:</strong> Sedikit lagi. Serius. Jangan menyerah seperti saat melihat error di console log.</p>
+                        <p class="mb-4"><strong>PASAL 23:</strong> Dengan mencapai titik ini, Anda setuju untuk mengakui bahwa RIT adalah organisasi terkeren di kampus ini. Tidak ada penolakan.</p>
+                        <p class="mb-4"><strong>PASAL 99 (PENUTUP):</strong> Akhirnya sampai juga. Selamat! Anda telah membuktikan bahwa Anda memiliki kemampuan literasi (atau kemampuan scroll cepat) yang mumpuni. Silakan tekan tombol di bawah jika Anda menemukannya.</p>
+                        <p class="mb-4" style="opacity: 0.5; font-size: 0.8rem;"><em>Drafted by: Tim Developer kurang gaji.</em></p>
                         <div class="h-10"></div> </div>
                 </div>
 
@@ -131,41 +140,146 @@ const levels = {
     // LEVEL 2: DARK PATTERN (CHECKBOX)
     2: {
         render: () => `
-            <div class="flex flex-col justify-center h-full fade-in">
-                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 shadow-2xl">
-                    <h2 class="text-xl font-bold mb-2 text-yellow-400">⚠ PEMBERITAHUAN PRIVASI</h2>
-                    <p class="text-sm text-gray-300 mb-6 leading-relaxed">
-                        Kami menghargai privasi Anda, tapi kami lebih menghargai uang dari pengiklan.
-                    </p>
-
-                    <div class="bg-gray-900 p-4 rounded border border-gray-600 mb-6">
-                        <label class="flex items-start gap-3 cursor-pointer group">
-                            <div class="relative flex items-center">
-                                <input type="checkbox" id="chk-spam" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-blue-500 checked:border-blue-500 transition-all">
-                                <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none">
-                                    <path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <span class="text-xs text-gray-400 group-hover:text-gray-200 select-none">
-                                Saya bersedia menerima 100 email spam per hari dan menjual data lokasi saya ke pihak ketiga.
-                            </span>
-                        </label>
+            <div class="flex flex-col justify-center h-full fade-in px-4">
+                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 shadow-2xl w-full max-w-md mx-auto flex flex-col max-h-[90vh]">
+                    
+                    <div class="shrink-0">
+                        <h2 class="text-xl font-bold mb-2 text-yellow-400">⚠ PEMBERITAHUAN PRIVASI</h2>
+                        <p class="text-sm text-gray-300 mb-4 leading-relaxed border-b border-gray-700 pb-4">
+                            Kami menghargai privasi Anda, tapi kami lebih menghargai uang dari pengiklan.
+                        </p>
                     </div>
 
-                    <button id="btn-submit-lvl2" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded transition-colors shadow-lg">
-                        ACCEPT & CONTINUE
-                    </button>
+                    <div class="space-y-3 mb-6 overflow-y-auto pr-2 custom-scrollbar flex-1 min-h-0">
+                        
+                        <div class="bg-gray-900/50 p-3 rounded border border-gray-600 hover:border-gray-500 transition-colors">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <div class="relative flex items-center mt-1">
+                                    <input type="checkbox" id="chk-satelit" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-red-500 checked:border-red-500 transition-all trap-checkbox">
+                                    <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300">
+                                    Saya <strong class="text-white">MENOLAK</strong> hak saya untuk <strong class="text-white">TIDAK</strong> dilacak oleh satelit mata-mata.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="bg-gray-900/50 p-3 rounded border border-gray-600 hover:border-gray-500 transition-colors">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <div class="relative flex items-center mt-1">
+                                    <input type="checkbox" id="chk-lapar" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-red-500 checked:border-red-500 transition-all trap-checkbox">
+                                    <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300">
+                                    Saya memilih untuk membiarkan developer kelaparan daripada memberikan data anonim yang tidak berharga.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="bg-gray-900/50 p-3 rounded border border-gray-600 hover:border-gray-500 transition-colors">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <div class="relative flex items-center mt-1">
+                                    <input type="checkbox" id="chk-obat" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-red-500 checked:border-red-500 transition-all trap-checkbox">
+                                    <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300">
+                                    Tolong <strong class="text-white">JANGAN HENTIKAN</strong> pengiriman email promosi obat kuat ke inbox dosen wali saya.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="bg-gray-900/50 p-3 rounded border border-gray-600 hover:border-gray-500 transition-colors">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <div class="relative flex items-center mt-1">
+                                    <input type="checkbox" id="chk-pass" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-red-500 checked:border-red-500 transition-all trap-checkbox">
+                                    <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300">
+                                    Hapus centang ini jika Anda <strong class="text-white">TIDAK</strong> keberatan jika kami <strong class="text-white">GAGAL</strong> melindungi password Anda.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="bg-gray-900/50 p-3 rounded border border-gray-600 hover:border-gray-500 transition-colors">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <div class="relative flex items-center mt-1">
+                                    <input type="checkbox" id="chk-cam" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-red-500 checked:border-red-500 transition-all trap-checkbox">
+                                    <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300">
+                                    Saya mengizinkan akses kamera depan untuk menilai ekspresi wajah saya saat <em>coding</em> error.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="bg-gray-900/50 p-3 rounded border border-gray-600 hover:border-gray-500 transition-colors">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <div class="relative flex items-center mt-1">
+                                    <input type="checkbox" id="chk-slow" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-red-500 checked:border-red-500 transition-all trap-checkbox">
+                                    <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300">
+                                    Saya mengerti bahwa menolak opsi ini akan membuat loading website menjadi 10x lebih lambat secara sengaja.
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="bg-gray-900/50 p-3 rounded border border-gray-600 hover:border-gray-500 transition-colors">
+                            <label class="flex items-start gap-3 cursor-pointer select-none">
+                                <div class="relative flex items-center mt-1">
+                                    <input type="checkbox" id="chk-sosmed" checked class="peer h-5 w-5 cursor-pointer appearance-none rounded border border-gray-500 checked:bg-red-500 checked:border-red-500 transition-all trap-checkbox">
+                                    <svg class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 pointer-events-none opacity-0 peer-checked:opacity-100 text-white" viewBox="0 0 14 14" fill="none"><path d="M3 7L6 10L11 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </div>
+                                <span class="text-sm text-gray-300">
+                                    Saya setuju untuk <strong class="text-white">TIDAK MENUNTUT</strong> jika akun media sosial saya tiba-tiba memposting "I Love RIT" secara otomatis.
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="shrink-0 pt-2 border-t border-gray-700/50">
+                        <button id="btn-submit-lvl2" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded transition-colors shadow-lg">
+                            ACCEPT & CONTINUE
+                        </button>
+                    </div>
                 </div>
             </div>
         `,
         setup: () => {
             const btn = document.getElementById('btn-submit-lvl2');
-            const chk = document.getElementById('chk-spam');
+            
+            // Ambil semua checkbox jebakan
+            const traps = document.querySelectorAll('.trap-checkbox');
 
             btn.addEventListener('click', () => {
-                if (chk.checked) {
-                    takeDamage("Eits! Jangan mau dispam. Uncheck dulu!");
+                let isTrapped = false;
+                let errorMessage = "";
+
+                // Cek satu per satu
+                traps.forEach(chk => {
+                    if (chk.checked) {
+                        isTrapped = true;
+                        // Efek visual: Bikin checkboxnya berkedip merah kalau masih dicentang
+                        chk.closest('div.bg-gray-900\\/50').classList.add('animate-pulse');
+                    } else {
+                        chk.closest('div.bg-gray-900\\/50').classList.remove('animate-pulse');
+                    }
+                });
+
+                if (isTrapped) {
+                    // Randomly pilih pesan error biar ngeselin
+                    const insults = [
+                        "Hayo, dibaca lagi! Masih ada jebakan yang dicentang.",
+                        "Kamu mau data kamu dijual? Uncheck semua woy!",
+                        "Serius mau dosen wali dapet spam? Jangan ngadi-ngadi.",
+                        "Satelit mata-mata sedang mengunci lokasi Anda... Matikan centangnya!"
+                    ];
+                    const randomMsg = insults[Math.floor(Math.random() * insults.length)];
+                    
+                    takeDamage(randomMsg);
                 } else {
+                    // Lolos semua
                     nextLevel();
                 }
             });
@@ -221,7 +335,7 @@ const levels = {
                     </p>
 
                     <div class="bg-black p-4 rounded mb-4 text-center border border-gray-600">
-                        <code class="text-green-400 font-bold text-lg select-none">sya mnyetujui sgalanya</code>
+                        <code class="text-green-400 font-bold text-lg select-all">sya mnyetujui sgalanya</code>
                     </div>
 
                     <input type="text" id="typo-input" class="w-full bg-gray-700 text-white p-3 rounded border-2 border-transparent focus:border-blue-500 focus:outline-none text-center font-mono text-lg placeholder-gray-500" placeholder="Ketik di sini..." autocomplete="off">
@@ -270,16 +384,19 @@ const levels = {
 
     // --- FASE 2: ESCALATION (LEVEL 5-8) ---
     // LEVEL 5: THE BUTTON (HIDE & SEEK)
-    5: {
+  5: {
         render: () => `
             <div class="flex flex-col h-full fade-in">
-                <div class="bg-gray-800 p-4 rounded-t-xl border border-gray-700">
-                    <h2 class="text-lg font-bold text-gray-200">UI EXPERIMENT v0.1</h2>
-                    <p class="text-xs text-gray-400">Kami sedang mencoba desain minimalis. Tombolnya ada kok, cari saja.</p>
+                <div class="bg-gray-800 p-4 rounded-t-xl border border-gray-700 flex justify-between items-center">
+                    <div>
+                        <h2 class="text-lg font-bold text-green-500 font-mono">>>> SYSTEM_LOG_DUMP</h2>
+                        <p class="text-xs text-gray-400">GUI failed to load. Manual override required.</p>
+                    </div>
+                    <div class="animate-pulse w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
                 
-                <div class="bg-gray-900 p-4 border-x border-b border-gray-700 rounded-b-xl flex-grow overflow-y-auto relative">
-                    <div id="text-wall" class="text-gray-500 text-xs text-justify leading-relaxed font-mono select-none">
+                <div class="bg-black p-4 border-x border-b border-gray-700 rounded-b-xl flex-grow overflow-y-auto relative custom-scrollbar">
+                    <div id="text-wall" class="text-gray-600 text-xs text-justify leading-relaxed font-mono select-none break-all">
                         </div>
                 </div>
             </div>
@@ -287,20 +404,43 @@ const levels = {
         setup: () => {
             const container = document.getElementById('text-wall');
             
-            // Generate Lorem Ipsum
-            const lorem = "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat ";
-            const words = lorem.repeat(10).split(' ');
+            // Kumpulan kata-kata "Techno-babble" & Log Systems
+            // Ini terlihat seperti sistem yang sedang bekerja keras
+            const jargon = [
+                "INITIALIZING_HANDSHAKE", "0x4F5A2", "BUFFER_OVERFLOW", "DATA_MINING", 
+                "PRIVACY_BYPASS", "ENCRYPTING_USER_SOUL", "LOADING_ASSETS", "RENDER_TEXTURE", 
+                "MEMORY_LEAK_DETECTED", "ETHICAL_CONSTRAINTS_DISABLED", "OPTIMIZING_AD_REVENUE", 
+                "TRACKING_PIXELS_ACTIVE", "IP_LOGGED", "GEOLOCATION_SYNC", "UPLOAD_COMPLETE", 
+                "SYSTEM_32", "KERNEL_PANIC", "NULL_POINTER", "STACK_TRACE", "DEPRECATED_API",
+                "USER_AGREEMENT_PENDING", "TERMS_V9.2", "COPYRIGHT_INFRINGEMENT", "SUBMIT_DATA",
+                "FATAL_ERROR", "RETRYING_CONNECTION", "PING_LOCALHOST", "SSH_TUNNEL", "SUDO_ACCESS"
+            ];
             
-            // Sisipkan tombol di posisi acak (tapi agak di tengah/bawah biar seru)
-            const btnIndex = Math.floor(Math.random() * (words.length - 50)) + 20;
+            // Buat array kata yang panjang (misal 500 kata)
+            let logStream = [];
+            for(let i=0; i<400; i++) {
+                // Ambil kata acak dari array jargon
+                const randomWord = jargon[Math.floor(Math.random() * jargon.length)];
+                // Tambahkan elemen dekorasi biar makin 'hacker'
+                const decoration = Math.random() > 0.8 ? `[${Math.floor(Math.random()*999)}]` : "";
+                logStream.push(decoration + randomWord);
+            }
+
+            // Tentukan posisi tombol rahasia (di 1/3 akhir teks biar user scroll dulu)
+            const btnIndex = Math.floor(Math.random() * 100) + 250; 
             
             let html = "";
-            words.forEach((word, i) => {
+            logStream.forEach((word, i) => {
                 if (i === btnIndex) {
-                    // Ini tombolnya: Menyamar jadi teks biasa
-                    html += `<span id="hidden-btn" class="cursor-pointer text-gray-500 hover:text-white transition-colors duration-75 font-bold">I_AGREE</span> `;
+                    // TOMBOL RAHASIA
+                    // Warnanya abu-abu (gray-600) sama seperti teks lain.
+                    // Tapi kalau di-hover berubah jadi Hijau Neon & Bold.
+                    html += `<span id="hidden-btn" class="cursor-pointer text-gray-600 hover:text-green-400 hover:bg-gray-900 hover:font-bold transition-all duration-75">[AGREE_TERMS]</span> `;
                 } else {
-                    html += `<span>${word}</span> `;
+                    // Teks biasa
+                    // Kadang-kadang ada teks yang warnanya agak beda dikit buat kecoh
+                    const colorClass = Math.random() > 0.95 ? "text-gray-500" : "text-gray-600";
+                    html += `<span class="${colorClass}">${word}</span> `;
                 }
             });
             
@@ -308,7 +448,12 @@ const levels = {
 
             const btn = document.getElementById('hidden-btn');
             btn.addEventListener('click', () => {
-                nextLevel();
+                // Efek visual sedikit saat diklik
+                btn.innerText = "ACCESS_GRANTED";
+                btn.classList.add("text-green-500", "bg-black");
+                setTimeout(() => {
+                    nextLevel();
+                }, 500);
             });
         }
     },
@@ -316,37 +461,44 @@ const levels = {
     // LEVEL 6: THE CHECKBOX (DOUBLE NEGATIVE)
     6: {
         render: () => `
-            <div class="flex flex-col justify-center h-full fade-in">
-                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 shadow-2xl">
-                    <h2 class="text-xl font-bold mb-2 text-yellow-400">⚠ PRIVASI (MUNGKIN)</h2>
+            <div class="flex flex-col justify-center h-full fade-in px-4">
+                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 shadow-2xl w-full max-w-md mx-auto">
+                    <h2 class="text-xl font-bold mb-2 text-yellow-400">⚠ UJIAN LOGIKA PRIVASI</h2>
                     <p class="text-sm text-gray-300 mb-6 font-bold bg-black/30 p-2 rounded text-center border border-gray-600">
-                        MISI: Pastikan data Anda AMAN.
+                        MISI: Konfigurasi agar akun Anda AMAN & NYAMAN.
                     </p>
 
                     <div class="space-y-4 mb-6">
-                        <label class="flex items-start gap-3 cursor-pointer p-3 bg-gray-900 rounded border border-gray-600 hover:bg-gray-800 transition">
-                            <input type="checkbox" id="chk-6-1" class="mt-1 accent-red-500 w-5 h-5">
+                        <label class="flex items-start gap-3 cursor-pointer p-3 bg-gray-900 rounded border border-gray-600 hover:bg-gray-800 transition select-none">
+                            <input type="checkbox" id="chk-6-1" class="mt-1 accent-red-500 w-5 h-5 cursor-pointer">
                             <div class="text-xs text-gray-300">
                                 "Jangan tidak jual data saya kepada pihak ketiga yang tidak bertanggung jawab."
                             </div>
                         </label>
 
-                        <label class="flex items-start gap-3 cursor-pointer p-3 bg-gray-900 rounded border border-gray-600 hover:bg-gray-800 transition">
-                            <input type="checkbox" id="chk-6-2" class="mt-1 accent-red-500 w-5 h-5">
+                        <label class="flex items-start gap-3 cursor-pointer p-3 bg-gray-900 rounded border border-gray-600 hover:bg-gray-800 transition select-none">
+                            <input type="checkbox" id="chk-6-2" class="mt-1 accent-red-500 w-5 h-5 cursor-pointer">
                             <div class="text-xs text-gray-300">
                                 "Hapus akun saya secara permanen jika saya tidak aktif selama 5 menit."
                             </div>
                         </label>
 
-                        <label class="flex items-start gap-3 cursor-pointer p-3 bg-gray-900 rounded border border-gray-600 hover:bg-gray-800 transition">
-                            <input type="checkbox" id="chk-6-3" class="mt-1 accent-red-500 w-5 h-5">
+                        <label class="flex items-start gap-3 cursor-pointer p-3 bg-gray-900 rounded border border-gray-600 hover:border-green-500 transition select-none group">
+                            <input type="checkbox" id="chk-6-secure" class="mt-1 accent-green-500 w-5 h-5 cursor-pointer">
+                            <div class="text-xs text-gray-300 group-hover:text-white">
+                                "Saya TIDAK MEMINTA agar koneksi saya TIDAK dienkripsi (SSL) supaya Admin tidak bisa mengintip password saya."
+                            </div>
+                        </label>
+
+                        <label class="flex items-start gap-3 cursor-pointer p-3 bg-gray-900 rounded border border-gray-600 hover:bg-gray-800 transition select-none">
+                            <input type="checkbox" id="chk-6-3" class="mt-1 accent-red-500 w-5 h-5 cursor-pointer">
                             <div class="text-xs text-gray-300">
                                 "Saya TIDAK keberatan jika data saya disimpan di server yang TIDAK aman."
                             </div>
                         </label>
                     </div>
 
-                    <button id="btn-lvl6" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded transition-colors shadow-lg">
+                    <button id="btn-lvl6" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded transition-colors shadow-lg active:scale-95 transform duration-100">
                         KONFIRMASI PILIHAN
                     </button>
                 </div>
@@ -356,59 +508,188 @@ const levels = {
             const btn = document.getElementById('btn-lvl6');
             
             btn.addEventListener('click', () => {
-                const c1 = document.getElementById('chk-6-1').checked;
-                const c2 = document.getElementById('chk-6-2').checked;
-                const c3 = document.getElementById('chk-6-3').checked;
+                const c1 = document.getElementById('chk-6-1').checked;      // Trap (Harus False)
+                const c2 = document.getElementById('chk-6-2').checked;      // Trap (Harus False)
+                const cSecure = document.getElementById('chk-6-secure').checked; // Good (Harus True)
+                const c3 = document.getElementById('chk-6-3').checked;      // Trap (Harus False)
 
-                // LOGIKA MENANG: Semua harus UNCHECKED (False) agar data aman
-                // 1. "Jangan tidak jual" (checked = jual). Uncheck = Jangan jual.
-                // 2. "Hapus akun" (checked = hapus). Uncheck = Jangan hapus.
-                // 3. "Tidak keberatan data tidak aman" (checked = data tidak aman). Uncheck = keberatan (ingin aman).
-
-                if (!c1 && !c2 && !c3) {
+                // LOGIKA MENANG:
+                // Traps harus Mati (False) AND Security harus Nyala (True)
+                
+                if (!c1 && !c2 && !c3 && cSecure) {
                     nextLevel();
+                } else if (!cSecure) {
+                    // Pesan khusus jika user lupa mencentang yang positif
+                    takeDamage("Waduh! Anda menolak Enkripsi? Password Anda barusan kelihatan lho!");
+                    document.getElementById('chk-6-secure').parentElement.classList.add('animate-pulse', 'border-red-500');
                 } else {
-                    takeDamage("Pilihan Anda membahayakan data! Coba baca lagi.");
+                    // Pesan jika user masih mencentang trap
+                    takeDamage("Masih ada jebakan yang Anda setujui. Baca pelan-pelan!");
                 }
             });
         }
     },
 
     // LEVEL 7: THE QUIZ (STROOP EFFECT)
-    7: {
+7: {
         render: () => `
-            <div class="flex flex-col justify-center h-full fade-in">
-                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center">
-                    <h2 class="text-2xl font-bold mb-6 text-white">TES FOKUS</h2>
-                    <p class="text-lg text-gray-300 mb-8 animate-pulse">
-                        Klik gambar <span class="font-black text-white underline decoration-blue-500">LINGKARAN</span>
+            <div class="flex flex-col justify-center h-full fade-in px-4">
+                <div class="bg-gray-800 rounded-xl border border-gray-700 p-6 text-center w-full max-w-lg mx-auto shadow-2xl">
+                    <h2 class="text-2xl font-bold mb-2 text-white">TES FOKUS</h2>
+                    
+                    <div class="w-full bg-gray-700 h-2 rounded-full mb-6 overflow-hidden">
+                        <div id="focus-progress" class="bg-blue-500 h-full w-0 transition-all duration-300"></div>
+                    </div>
+
+                    <p id="focus-instruction" class="text-xl text-gray-300 mb-8 h-16 flex items-center justify-center">
+                        Loading...
                     </p>
 
-                    <div class="flex justify-center gap-6 items-center">
-                        <div class="shape-btn cursor-pointer bg-red-500 w-24 h-24 flex items-center justify-center font-bold text-white text-xs border-4 border-transparent hover:border-white transition-all shadow-xl hover:scale-105" data-shape="square">
-                            LINGKARAN
+                    <div id="shape-container" class="grid grid-cols-3 gap-4">
                         </div>
-
-                        <div class="shape-btn cursor-pointer bg-blue-500 w-24 h-24 rounded-full flex items-center justify-center font-bold text-white text-xs border-4 border-transparent hover:border-white transition-all shadow-xl hover:scale-105" data-shape="circle">
-                            KOTAK
-                        </div>
-                    </div>
                 </div>
             </div>
         `,
         setup: () => {
-            const shapes = document.querySelectorAll('.shape-btn');
-            shapes.forEach(shape => {
-                shape.addEventListener('click', (e) => {
-                    const type = e.target.dataset.shape;
-                    // Instruksi: Klik GAMBAR Lingkaran.
-                    if (type === 'circle') {
-                        nextLevel();
-                    } else {
-                        takeDamage("Itu gambar Kotak! Jangan terkecoh tulisan.");
-                    }
+            const container = document.getElementById('shape-container');
+            const instructionEl = document.getElementById('focus-instruction');
+            const progressBar = document.getElementById('focus-progress');
+
+            // Konfigurasi Game
+            const TOTAL_ROUNDS = 5;
+            let currentRound = 0;
+
+            // Database Bentuk & Label
+            const shapesData = [
+                { type: 'circle', label: 'LINGKARAN', css: 'rounded-full' },
+                { type: 'square', label: 'KOTAK', css: 'rounded-xl' }, // Rounded dikit biar estetik
+                { type: 'triangle', label: 'SEGITIGA', css: 'clip-triangle' } // Perlu custom CSS atau SVG
+            ];
+
+            const colors = [
+                { name: 'red', bg: 'bg-red-500', text: 'text-red-500' },
+                { name: 'blue', bg: 'bg-blue-500', text: 'text-blue-500' },
+                { name: 'green', bg: 'bg-green-500', text: 'text-green-500' },
+                { name: 'yellow', bg: 'bg-yellow-500', text: 'text-yellow-500' }
+            ];
+
+            // Helper: Generate Segitiga via Clip-path (karena Tailwind default ga ada triangle)
+            // Kita inject style ini sekali saja
+            if (!document.getElementById('triangle-style')) {
+                const style = document.createElement('style');
+                style.id = 'triangle-style';
+                style.innerHTML = `.clip-triangle { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }`;
+                document.head.appendChild(style);
+            }
+
+            // --- CORE LOGIC ---
+            const nextRound = () => {
+                // Cek Win Condition
+                if (currentRound >= TOTAL_ROUNDS) {
+                    instructionEl.innerHTML = `<span class="text-green-400 font-bold">FOKUS TERUJI!</span>`;
+                    setTimeout(nextLevel, 800);
+                    return;
+                }
+
+                // Update Progress Bar
+                const progressPct = (currentRound / TOTAL_ROUNDS) * 100;
+                progressBar.style.width = `${progressPct}%`;
+
+                container.innerHTML = ""; // Bersihkan tombol lama
+
+                // 1. Tentukan TARGET Ronde ini (Misal: Cari GAMBAR SEGITIGA)
+                const targetShape = shapesData[Math.floor(Math.random() * shapesData.length)];
+                
+                // Set Instruksi
+                instructionEl.innerHTML = `Klik gambar <span class="font-black text-white underline decoration-blue-500 mx-2 uppercase text-2xl">${targetShape.label}</span>`;
+
+                // 2. Siapkan 3 Tombol (1 Benar, 2 Salah)
+                let roundButtons = [];
+
+                // --- TOMBOL BENAR (Correct Answer) ---
+                // Visual: Benar (Target)
+                // Label: SALAH (Pengecoh)
+                const wrongLabelForCorrectBtn = shapesData.filter(s => s.type !== targetShape.type)[Math.floor(Math.random() * 2)];
+                const colorCorrect = colors[Math.floor(Math.random() * colors.length)];
+                
+                roundButtons.push({
+                    isCorrect: true,
+                    visualType: targetShape.type, // Visual BENAR
+                    visualCss: targetShape.css,
+                    labelText: wrongLabelForCorrectBtn.label, // Teks SALAH (Stroop)
+                    colorClass: colorCorrect.bg
                 });
-            });
+
+                // --- TOMBOL SALAH (Decoys) ---
+                // Buat 2 tombol sisa
+                const remainingShapes = shapesData.filter(s => s.type !== targetShape.type); // Sisa bentuk yang bukan target
+                
+                // Agar tombolnya jadi 3, kita ambil dari sisa bentuk atau random ulang
+                for (let i = 0; i < 2; i++) {
+                    // Kita pilih bentuk visual yang SALAH
+                    // Bisa random, tapi usahakan beda-beda biar variatif
+                    const decoyVisual = remainingShapes[i % remainingShapes.length]; // Rotasi sisa bentuk
+                    
+                    // Labelnya? Bisa label Target (Jebakan maut) atau Random
+                    // 50% chance labelnya adalah Label Target ("Klik Segitiga", tombol ini tulisannya "Segitiga" tapi gambarnya Kotak)
+                    const isTrapLabel = Math.random() > 0.5;
+                    const decoyLabel = isTrapLabel ? targetShape.label : shapesData[Math.floor(Math.random() * shapesData.length)].label;
+
+                    const colorDecoy = colors[Math.floor(Math.random() * colors.length)];
+
+                    roundButtons.push({
+                        isCorrect: false,
+                        visualType: decoyVisual.type,
+                        visualCss: decoyVisual.css,
+                        labelText: decoyLabel,
+                        colorClass: colorDecoy.bg
+                    });
+                }
+
+                // 3. Acak Posisi Tombol (Shuffle Array)
+                roundButtons.sort(() => Math.random() - 0.5);
+
+                // 4. Render ke HTML
+                roundButtons.forEach(btn => {
+                    const btnEl = document.createElement('div');
+                    
+                    // Style dasar tombol
+                    btnEl.className = `
+                        cursor-pointer w-full aspect-square flex items-center justify-center 
+                        font-bold text-white text-[10px] sm:text-xs md:text-sm 
+                        transition-transform active:scale-95 shadow-lg select-none
+                        ${btn.colorClass} ${btn.visualCss}
+                    `;
+                    
+                    // Teks di dalam tombol
+                    btnEl.innerText = btn.labelText;
+
+                    // Event Listener
+                    btnEl.addEventListener('click', () => {
+                        if (btn.isCorrect) {
+                            currentRound++;
+                            nextRound(); // Lanjut ronde berikutnya
+                        } else {
+                            // Reset progress kalau salah! (Sadis tapi seru)
+                            // Atau kurangi nyawa. Di sini kita reset level ini aja (visual effect).
+                            takeDamage("Salah! Lihat GAMBARNYA, bukan tulisan/warnanya.");
+                            
+                            // Opsional: Reset ronde ke 0 biar greget (Focus Mode)
+                            currentRound = 0; 
+                            progressBar.style.width = '0%';
+                            progressBar.classList.add('bg-red-500');
+                            setTimeout(() => progressBar.classList.remove('bg-red-500'), 200);
+                            
+                            nextRound(); // Re-roll
+                        }
+                    });
+
+                    container.appendChild(btnEl);
+                });
+            };
+
+            // Mulai Ronde Pertama
+            nextRound();
         }
     },
 
@@ -424,7 +705,7 @@ const levels = {
                     </p>
 
                     <div class="bg-black p-3 rounded mb-4 text-center border border-gray-600 relative group">
-                        <p class="text-yellow-400 font-mono text-sm leading-relaxed select-none" id="target-text">Sumpah mi apa saya rela nilai D kalau tidak menyelesaikan game ini</p>
+                        <p class="text-yellow-400 font-mono text-sm leading-relaxed select-all" id="target-text">Sumpah saya rela nilai D kalau tidak menyelesaikan game ini</p>
                         <div class="absolute top-0 right-0 p-1 text-[10px] text-gray-600">No Copy-Paste</div>
                     </div>
 
@@ -439,7 +720,7 @@ const levels = {
         setup: () => {
             const input = document.getElementById('long-input');
             const btn = document.getElementById('btn-lvl8');
-            const target = "Sumpah mi apa saya rela nilai D kalau tidak menyelesaikan game ini";
+            const target = "Sumpah saya rela nilai D kalau tidak menyelesaikan game ini";
 
             // Mencegah Paste
             input.addEventListener('paste', (e) => {
@@ -573,7 +854,7 @@ const levels = {
             btn.style.left = "35%";
 
             let dodges = 0;
-            const maxDodges = 8; // Berhenti setelah 8 kali
+            const maxDodges = 15; // Berhenti setelah 15 kali
             let isTired = false;
 
             const moveButton = () => {
@@ -683,25 +964,27 @@ const levels = {
     // LEVEL 12: MAGNIFIER (MICRO TEXT)
     12: {
         render: () => `
-            <div class="flex flex-col h-full fade-in">
-                <div class="bg-gray-800 p-4 rounded-t-xl border border-gray-700 text-center">
-                    <h2 class="text-lg font-bold mb-1">🔍 FINE PRINT</h2>
-                    <p class="text-xs text-gray-400">Ada password tersembunyi di teks super kecil ini.</p>
+            <div class="flex flex-col h-full fade-in px-4">
+                <div class="bg-gray-800 p-4 rounded-t-xl border border-gray-700 text-center shrink-0">
+                    <h2 class="text-lg font-bold mb-1 text-white">🔍 THE FINE PRINT</h2>
+                    <p class="text-xs text-gray-400">Temukan nomor referensi <span class="font-mono font-bold text-yellow-400">SEC-????</span> di dokumen legal ini.</p>
                 </div>
                 
-                <div class="bg-white text-black p-4 border-x border-gray-700 flex-grow relative overflow-hidden cursor-crosshair group touch-none" id="magnifier-area">
+                <div class="bg-white text-black p-4 border-x border-gray-700 flex-grow relative overflow-hidden cursor-crosshair group touch-none shadow-inner" id="magnifier-area">
                     
-                    <div id="micro-content" class="text-[3px] leading-[4px] text-justify font-serif text-gray-800 break-words select-none pointer-events-none transition-transform duration-100 origin-top-left">
+                    <div id="micro-content" class="w-full h-full text-[3px] leading-[4px] text-justify font-serif text-gray-700 break-words select-none pointer-events-none transition-transform duration-75 origin-top-left columns-2 gap-2">
                         </div>
 
-                    <div id="lens" class="absolute w-24 h-24 rounded-full border-2 border-gray-400 bg-white/30 backdrop-contrast-150 backdrop-saturate-150 pointer-events-none hidden shadow-2xl transform -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-multiply"></div>
+                    <div id="lens" class="absolute w-32 h-32 rounded-full border-[6px] border-gray-800 bg-white/10 backdrop-contrast-200 backdrop-saturate-200 pointer-events-none hidden shadow-2xl transform -translate-x-1/2 -translate-y-1/2 z-50 overflow-hidden ring-1 ring-black/20">
+                        <div class="absolute top-2 left-2 w-full h-full bg-gradient-to-br from-white/40 to-transparent rounded-full pointer-events-none"></div>
+                    </div>
 
                 </div>
 
-                <div class="bg-gray-800 p-4 rounded-b-xl border border-gray-700">
+                <div class="bg-gray-800 p-4 rounded-b-xl border border-gray-700 shrink-0">
                     <div class="flex gap-2">
-                        <input type="text" id="pass-input" placeholder="Kode: ????" class="w-full bg-gray-900 text-white px-3 py-2 rounded border border-gray-600 font-mono text-center tracking-widest uppercase">
-                        <button id="btn-lvl12" class="bg-blue-600 px-4 py-2 rounded font-bold text-white">OK</button>
+                        <input type="text" id="pass-input" placeholder="SEC-????" class="w-full bg-gray-900 text-white px-3 py-2 rounded border border-gray-600 font-mono text-center tracking-widest uppercase focus:border-blue-500 outline-none placeholder-gray-600">
+                        <button id="btn-lvl12" class="bg-blue-600 hover:bg-blue-500 px-6 py-2 rounded font-bold text-white transition-colors">VERIFIKASI</button>
                     </div>
                 </div>
             </div>
@@ -713,68 +996,132 @@ const levels = {
             const input = document.getElementById('pass-input');
             const btn = document.getElementById('btn-lvl12');
 
-            // 1. Generate Teks Micro
-            const passCode = "1234";
-            const dummy = "lorem ipsum dolor sit amet consectetur agreement ";
-            let text = "";
+            // --- 1. GENERATOR DOKUMEN LEGAL REALISTIS ---
             
-            // Buat banyak teks, sisipkan password di tengah random
-            for(let i=0; i<400; i++) {
-                if (i === 200) {
-                    text += `<span class="font-bold text-red-900 bg-yellow-200">PASSWORD:${passCode}</span> `;
-                } else {
-                    text += dummy;
-                }
-            }
-            container.innerHTML = text;
+            const secretCode = Math.floor(1000 + Math.random() * 9000); 
+            const targetString = `SEC-${secretCode}`;
 
-            // 2. Logic Magnifier (CSS Transform Origin)
-            const handleMove = (x, y) => {
-                // Tampilkan lensa
-                lens.classList.remove('hidden');
+            // Kata-kata yang akan di-bold secara acak sebagai pengecoh
+            const boldKeywords = [
+                "LIABILITY", "INDEMNIFY", "TERMINATION", "IRREVOCABLE", "WARRANTY", 
+                "JURISDICTION", "DISCLAIMER", "AGREEMENT", "BINDING", "EXCLUSIVELY",
+                "ACKNOWLEDGES", "FORFEIT", "PERPETUITY", "VIOLATION", "CONSENT"
+            ];
+
+            // Kalimat-kalimat "Filler" Legal
+            const sentences = [
+                "The user hereby agrees to surrender all rights to personal autonomy within the confines of the application ecosystem.",
+                "Notwithstanding any provisions to the contrary, the provider reserves the right to monetize user anxiety.",
+                "In the event of a catastrophic system failure, the user agrees that data loss is a feature, not a bug.",
+                "This agreement shall be governed by the laws of thermodynamics, specifically entropy.",
+                "To the fullest extent permitted by applicable law, the developer disclaims all warranties, express or implied.",
+                "Failure to read this clause constitutes an immediate breach of contract and forfeiture of snack privileges.",
+                "The party of the first part hereby acknowledges that the party of the second part is just guessing the code.",
+                "Arbitration shall be held in a location determined by a roll of a twenty-sided die.",
+                "Any resemblance to actual legal advice is purely coincidental and unintended."
+            ];
+
+            // Fungsi helper untuk mengubah angka ke Romawi (untuk Pasal)
+            const toRoman = (num) => {
+                const rom = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+                return rom[num - 1] || num;
+            };
+
+            let docHTML = "";
+            
+            // Header Dokumen Palsu
+            docHTML += `<div class="w-full text-center font-bold mb-2 pb-1 border-b border-black text-[4px]">TERMS OF ETERNAL BINDING v.9.0</div>`;
+
+            // Generate 8 Pasal (Articles)
+            const targetArticle = Math.floor(Math.random() * 6) + 1; // Password ada di artikel random
+
+            for (let i = 1; i <= 8; i++) {
+                docHTML += `<div class="mb-2">`;
+                docHTML += `<span class="font-bold block mb-0.5">ARTICLE ${toRoman(i)} - GENERAL PROVISIONS</span>`;
                 
-                // Pindahkan posisi visual lensa
+                // Generate 3-5 paragraf per pasal
+                const paraCount = Math.floor(Math.random() * 3) + 3;
+                
+                for (let p = 0; p < paraCount; p++) {
+                    let sentence = sentences[Math.floor(Math.random() * sentences.length)];
+                    
+                    // Logic Pengecoh (Bold Random Words)
+                    // Kita split kalimat jadi kata-kata, lalu random bold
+                    let words = sentence.split(" ");
+                    let styledWords = words.map(w => {
+                        // Bersihkan tanda baca untuk cek keyword
+                        let cleanW = w.replace(/[^a-zA-Z]/g, "").toUpperCase();
+                        if (boldKeywords.includes(cleanW) && Math.random() > 0.5) {
+                            return `<b class="text-black">${w}</b>`;
+                        }
+                        return w;
+                    });
+                    
+                    let finalSentence = styledWords.join(" ");
+
+                    // SISIPKAN PASSWORD DI SINI?
+                    if (i === targetArticle && p === 1) {
+                        // Masukkan password di tengah kalimat secara natural
+                        finalSentence += ` Refer to clause <b class="text-black">${targetString}</b> for details regarding soul ownership.`;
+                    }
+
+                    docHTML += `<p class="mb-1 text-justify indent-1">${finalSentence}</p>`;
+                }
+                docHTML += `</div>`;
+            }
+
+            // Footer Dokumen
+            docHTML += `<div class="mt-4 pt-1 border-t border-black text-center italic text-[2px]">Doc Ref: ${Math.random().toString(36).substring(7).toUpperCase()} // Page 1 of 1</div>`;
+
+            container.innerHTML = docHTML;
+
+            // --- 2. LOGIC MAGNIFIER (Tetap sama, disesuaikan sedikit) ---
+            const handleMove = (clientX, clientY) => {
+                const rect = area.getBoundingClientRect();
+                const x = clientX - rect.left;
+                const y = clientY - rect.top;
+
+                if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
+                    lens.classList.add('hidden');
+                    return;
+                }
+
+                lens.classList.remove('hidden');
                 lens.style.left = `${x}px`;
                 lens.style.top = `${y}px`;
 
-                // ZOOM EFFECT:
-                // Kita mengubah transform-origin container ke posisi kursor
-                // Lalu scale container-nya
-                const rect = area.getBoundingClientRect();
-                const relX = x; 
-                const relY = y;
-
-                container.style.transformOrigin = `${relX}px ${relY}px`;
-                container.style.transform = "scale(4)"; // Zoom 4x
+                // Set origin zoom ke posisi kursor
+                container.style.transformOrigin = `${x}px ${y}px`;
+                // Zoom 5x agar teks 3px terbaca jelas (jadi setara 15px)
+                container.style.transform = "scale(5)"; 
             };
 
-            const resetZoom = () => {
+            area.addEventListener('mousemove', (e) => handleMove(e.clientX, e.clientY));
+            area.addEventListener('mouseleave', () => {
                 container.style.transform = "scale(1)";
                 lens.classList.add('hidden');
-            };
-
-            // Event Listeners Mouse
-            area.addEventListener('mousemove', (e) => {
-                const rect = area.getBoundingClientRect();
-                handleMove(e.clientX - rect.left, e.clientY - rect.top);
             });
-            area.addEventListener('mouseleave', resetZoom);
 
-            // Event Listeners Touch
+            // Touch support
             area.addEventListener('touchmove', (e) => {
-                e.preventDefault(); // Prevent scroll
+                e.preventDefault();
                 const touch = e.touches[0];
-                const rect = area.getBoundingClientRect();
-                handleMove(touch.clientX - rect.left, touch.clientY - rect.top);
+                handleMove(touch.clientX, touch.clientY);
+            }, { passive: false });
+            area.addEventListener('touchend', () => {
+                container.style.transform = "scale(1)";
+                lens.classList.add('hidden');
             });
-            area.addEventListener('touchend', resetZoom);
 
-            // 3. Logic Submit
+            // --- 3. VERIFIKASI ---
             btn.addEventListener('click', () => {
-                if (input.value.trim() === passCode) {
+                const userVal = input.value.trim().toUpperCase();
+                if (userVal === targetString) {
                     nextLevel();
                 } else {
-                    takeDamage("Kode salah! Cari lagi pakai kaca pembesar.");
+                    takeDamage("Nomor referensi salah! Jangan terkecoh teks tebal lainnya.");
+                    input.value = "";
+                    input.focus();
                 }
             });
         }
@@ -841,22 +1188,22 @@ const levels = {
     // LEVEL 14: COOKIE NIGHTMARE
     14: {
         render: () => `
-            <div class="flex flex-col h-full fade-in">
-                <div class="bg-gray-800 rounded-t-xl border border-gray-700 p-4 pb-2">
-                    <h2 class="text-lg font-bold">🍪 PREFERENSI COOKIE</h2>
-                    <p class="text-xs text-gray-400">Atur privasi Anda. Hijau = Aktif.</p>
+            <div class="flex flex-col h-full fade-in px-4">
+                <div class="bg-gray-800 rounded-t-xl border border-gray-700 p-4 pb-2 shrink-0">
+                    <h2 class="text-lg font-bold text-white">🍪 PREFERENSI COOKIE</h2>
+                    <p class="text-xs text-gray-400">Silakan pilih racun Anda. <span class="text-green-400">Hijau = Aktif</span>.</p>
                 </div>
 
-                <div class="bg-gray-900 p-4 flex-grow overflow-y-auto border-x border-gray-700 space-y-4">
+                <div class="bg-gray-900 p-4 flex-grow overflow-y-auto border-x border-gray-700 space-y-4 custom-scrollbar">
                     
-                    <div class="flex justify-between items-center p-3 bg-gray-800 rounded border border-gray-600">
+                    <div class="flex justify-between items-center p-3 bg-gray-800 rounded border border-gray-600 opacity-60">
                         <div class="text-xs">
                             <div class="font-bold text-gray-200">Cookie Wajib</div>
                             <div class="text-gray-500 text-[10px]">Agar website tidak meledak.</div>
                         </div>
-                        <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" id="cookie-essential" class="sr-only peer" checked disabled>
-                            <div class="w-11 h-6 bg-gray-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600 opacity-50 cursor-not-allowed"></div>
+                        <label class="relative inline-flex items-center cursor-not-allowed">
+                            <input type="checkbox" checked disabled class="sr-only peer">
+                            <div class="w-11 h-6 bg-gray-700 rounded-full peer-checked:bg-green-800 after:content-[''] after:absolute after:top-[2px] after:right-[2px] after:bg-gray-400 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5"></div>
                         </label>
                     </div>
 
@@ -873,6 +1220,17 @@ const levels = {
 
                     <div class="flex justify-between items-center p-3 bg-gray-800 rounded border border-gray-600">
                         <div class="text-xs">
+                            <div class="font-bold text-gray-200">Firewall Anti-Tuyul</div>
+                            <div class="text-gray-400 text-[10px]">Mencegah pencurian saldo gopay.</div>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="cookie-firewall" class="sr-only peer"> 
+                            <div class="w-11 h-6 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-600"></div>
+                        </label>
+                    </div>
+
+                    <div class="flex justify-between items-center p-3 bg-gray-800 rounded border border-gray-600">
+                        <div class="text-xs">
                             <div class="font-bold text-gray-200">Jual Data ke Mafia</div>
                             <div class="text-gray-500 text-[10px]">Membantu ekonomi bawah tanah.</div>
                         </div>
@@ -881,8 +1239,8 @@ const levels = {
                             <div class="w-11 h-6 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
                         </label>
                     </div>
-                     
-                     <div class="flex justify-between items-center p-3 bg-gray-800 rounded border border-gray-600">
+                      
+                    <div class="flex justify-between items-center p-3 bg-gray-800 rounded border border-gray-600">
                         <div class="text-xs">
                             <div class="font-bold text-gray-200">Keylogger</div>
                             <div class="text-gray-500 text-[10px]">Merekam password demi keamanan.</div>
@@ -895,9 +1253,9 @@ const levels = {
 
                 </div>
 
-                <div class="bg-gray-800 border border-gray-700 rounded-b-xl p-4 flex gap-2">
-                    <button id="btn-reject-all" class="w-1/3 bg-gray-700 text-gray-500 text-[10px] rounded hover:bg-gray-600">Reject All (Broken)</button>
-                    <button id="btn-save-cookie" class="w-2/3 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded text-sm">SIMPAN PENGATURAN</button>
+                <div class="bg-gray-800 border border-gray-700 rounded-b-xl p-4 flex gap-2 shrink-0">
+                    <button id="btn-reject-all" class="w-1/3 bg-gray-700 text-gray-500 text-[10px] rounded hover:bg-gray-600 transition-colors border border-gray-600">Reject All (Error 500)</button>
+                    <button id="btn-save-cookie" class="w-2/3 bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded text-sm shadow-lg transition-colors">SIMPAN PENGATURAN</button>
                 </div>
             </div>
         `,
@@ -906,19 +1264,33 @@ const levels = {
             const reject = document.getElementById('btn-reject-all');
             
             reject.addEventListener('click', () => {
-                takeDamage("Tombol ini rusak. Manual dong!");
+                // Efek tombol rusak
+                reject.innerText = "LOADING...";
+                setTimeout(() => {
+                    reject.innerText = "FAILED";
+                    reject.classList.add("text-red-500");
+                    takeDamage("Fitur 'Reject All' sedang cuti. Silakan manual.");
+                }, 500);
             });
 
             btn.addEventListener('click', () => {
                 const mic = document.getElementById('cookie-mic').checked;
+                const firewall = document.getElementById('cookie-firewall').checked; // Ini yang positif
                 const mafia = document.getElementById('cookie-mafia').checked;
                 const key = document.getElementById('cookie-key').checked;
 
-                // Harus Unchecked semua (False)
-                if (!mic && !mafia && !key) {
+                // LOGIKA MENANG:
+                // Traps harus False (Unchecked)
+                // Firewall harus True (Checked)
+
+                if (!mic && !mafia && !key && firewall) {
                     nextLevel();
+                } else if (!firewall) {
+                    takeDamage("Waduh! Anda lupa menyalakan Firewall Anti-Tuyul! Bahaya!");
+                    // Visual hint: Kedipkan border
+                    document.getElementById('cookie-firewall').closest('div').classList.add('animate-pulse', 'border-red-500');
                 } else {
-                    takeDamage("Anda masih mengizinkan hal berbahaya! Matikan yang hijau-hijau.");
+                    takeDamage("Anda masih mengizinkan spy! Matikan tombol hijau yang mencurigakan.");
                 }
             });
         }
@@ -930,7 +1302,7 @@ const levels = {
              <div class="flex flex-col h-full fade-in">
                 <div class="bg-gray-800 p-4 rounded-t-xl border border-gray-700 z-10">
                     <h2 class="text-lg font-bold text-white">⚙️ BROKEN SCROLLBAR</h2>
-                    <p class="text-xs text-gray-400">Scrollbar kami agak membal. Tahan di bawah untuk melanjutkan.</p>
+                    <p class="text-xs text-gray-400">Scrollbar kami agak bandel. Tahan scrollbar di bawah dan jangan biarkan dia naik lagi untuk melanjutkan.</p>
                 </div>
                 
                 <div class="relative flex-grow bg-gray-900 border-x border-b border-gray-700 rounded-b-xl overflow-hidden">
