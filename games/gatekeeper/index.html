@@ -4,127 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gatekeeper - PSDBD Edition</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="../components/style.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen">
     <div id="app">
-        <header>
-            <div class="header-content">
-                <h1>GATEKEEPER <span class="subtitle">v1.0 - Data Validator</span></h1>
-                <div class="stats">
-                    <div class="stat-box">Processed: <span id="count">0</span></div>
-                    <button id="btn-guess-trigger" class="btn-primary">I Know the Rules!</button>
+        <header class="bg-slate-800 border-b-2 border-cyan-500 p-4 shadow-md">
+            <div class="max-w-6xl mx-auto flex justify-between items-center">
+                <h1 class="text-xl font-bold tracking-wide">
+                    GATEKEEPER <span class="text-cyan-400 font-normal text-sm ml-2">v1.0 - Data Validator</span>
+                </h1>
+                <div class="flex items-center gap-6">
+                    <div class="text-slate-300">Processed: <span id="count" class="font-bold text-white text-lg">0</span></div>
+                    <button id="btn-guess-trigger" class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold py-2 px-4 rounded transition-colors">
+                        I Know the Rules!
+                    </button>
                 </div>
             </div>
         </header>
 
-        <main>
-            <section class="inspection-gate">
-                <div id="card-container">
-                    <div class="document-tag">INCOMING DATA</div>
-                    <div class="student-card" id="active-card">
-                        <div class="card-photo"></div>
-                        <div class="card-info">
-                            <div class="info-group">
-                                <label>Full Name</label>
-                                <div id="val-nama" class="info-text">-</div>
+        <main class="max-w-6xl mx-auto p-4 mt-8 grid grid-cols-1 md:grid-cols-[1fr_400px] gap-8">
+            
+            <section class="flex flex-col items-center gap-8">
+                <div class="relative">
+                    <div class="absolute -top-3 left-4 bg-cyan-500 text-slate-900 font-bold px-3 py-1 text-xs z-10 uppercase tracking-wider">
+                        Incoming Data
+                    </div>
+                    
+                    <div id="active-card" class="bg-slate-800 w-[350px] p-6 rounded-xl shadow-2xl border border-slate-700 relative">
+                        <div class="w-20 h-20 bg-slate-700 rounded mb-6"></div> <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs text-slate-400 uppercase tracking-wide">Full Name</label>
+                                <div id="val-nama" class="text-lg font-medium border-b border-slate-700 pb-1">-</div>
                             </div>
-                            <div class="info-group">
-                                <label>Student ID (NPM)</label>
-                                <div id="val-npm" class="info-text">-</div>
+                            <div>
+                                <label class="block text-xs text-slate-400 uppercase tracking-wide">Student ID (NPM)</label>
+                                <div id="val-npm" class="text-lg font-medium border-b border-slate-700 pb-1 text-cyan-300">-</div>
                             </div>
-                            <div class="info-group">
-                                <label>Major</label>
-                                <div id="val-jurusan" class="info-text">-</div>
+                            <div>
+                                <label class="block text-xs text-slate-400 uppercase tracking-wide">Major</label>
+                                <div id="val-jurusan" class="text-lg font-medium border-b border-slate-700 pb-1">-</div>
                             </div>
-                            <div class="grid-2">
-                                <div class="info-group">
-                                    <label>GPA (IPK)</label>
-                                    <div id="val-ipk" class="info-text">-</div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs text-slate-400 uppercase tracking-wide">GPA (IPK)</label>
+                                    <div id="val-ipk" class="text-lg font-medium border-b border-slate-700 pb-1">-</div>
                                 </div>
-                                <div class="info-group">
-                                    <label>Status</label>
-                                    <div id="val-status" class="info-text">-</div>
+                                <div>
+                                    <label class="block text-xs text-slate-400 uppercase tracking-wide">Status</label>
+                                    <div id="val-status" class="text-lg font-medium border-b border-slate-700 pb-1">-</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="controls">
-                    <button id="btn-reject" class="control-btn reject">REJECT</button>
-                    <button id="btn-approve" class="control-btn approve">APPROVE</button>
+                <div class="flex gap-4">
+                    <button id="btn-reject" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-transform active:scale-95">
+                        REJECT
+                    </button>
+                    <button id="btn-approve" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-transform active:scale-95">
+                        APPROVE
+                    </button>
                 </div>
             </section>
 
-            <section class="system-logs">
-                <h3>System Transaction History</h3>
-                <div id="history-list">
-                    <div class="empty-state">No transactions yet. Start processing data.</div>
+            <section class="bg-slate-950 rounded-xl p-5 border border-slate-800 shadow-inner h-[550px] flex flex-col">
+                <h3 class="font-bold text-slate-300 mb-4 border-b border-slate-800 pb-2">System Transaction History</h3>
+                <div id="history-list" class="flex-1 overflow-y-auto space-y-2 pr-2">
+                    <div class="text-slate-500 text-sm italic text-center mt-10">No transactions yet. Start processing data.</div>
                 </div>
             </section>
         </main>
 
-        <div id="modal-overlay" class="modal-overlay hidden">
-            <div class="modal-content">
-                <h2>Final Deduction: Entry Policy</h2>
-                <p>Berdasarkan history, tentukan kriteria validasi database yang benar:</p>
-                <form id="guess-form">
-                    <label>1. Kode Jurusan & Angkatan mana yang valid di NPM?</label>
-                    <div class="input-row">
-                        <select name="jurusan" required>
-                            <option value="">Pilih Jurusan...</option>
-                            <option value="71">71 (Ilmu Komunikasi)</option>
-                            <option value="72">72 (Teknologi Informasi)</option>
-                            <option value="73">73 (RPL)</option>
-                            <option value="74">74 (RSK)</option>
-                        </select>
-                        <select name="angkatan" required>
-                            <option value="">Angkatan...</option>
-                            <option value="21">2021</option>
-                            <option value="23">2023</option>
-                            <option value="25">2025</option>
-                        </select>
+        <div id="modal-overlay" class="fixed inset-0 bg-black/85 flex justify-center items-center z-50 hidden">
+            <div class="bg-slate-800 p-8 rounded-xl w-[500px] border border-cyan-500 shadow-2xl">
+                <h2 class="text-2xl font-bold mb-2 text-white">Final Deduction</h2>
+                <p class="text-slate-400 text-sm mb-6">Tentukan kriteria validasi database yang benar berdasarkan history log.</p>
+                
+                <form id="guess-form" class="space-y-4">
+                    <div>
+                        <label class="block font-bold mb-2 text-slate-200 text-sm">1. Kode Jurusan & Angkatan (NPM)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <select name="jurusan" required class="w-full p-3 bg-slate-900 border border-slate-700 text-white rounded focus:border-cyan-500 outline-none">
+                                <option value="">Pilih Jurusan...</option>
+                                <option value="71">71 (Ilmu Komunikasi)</option>
+                                <option value="72">72 (Teknologi Informasi)</option>
+                                <option value="73">73 (RPL)</option>
+                                <option value="74">74 (RSK)</option>
+                            </select>
+                            <select name="angkatan" required class="w-full p-3 bg-slate-900 border border-slate-700 text-white rounded focus:border-cyan-500 outline-none">
+                                <option value="">Angkatan...</option>
+                                <option value="21">2021</option>
+                                <option value="23">2023</option>
+                                <option value="24">2024</option>
+                                <option value="25">2025</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <label>2. Syarat IPK yang diterima:</label>
-                    <div class="input-row">
-                        <select name="ipk_operator" required>
-                            <option value="">Pilih Kondisi...</option>
-                            <option value=">=">Lebih dari atau sama dengan (>=)</option>
-                            <option value="<=">Kurang dari atau sama dengan (<=)</option>
-                        </select>
-                        <input type="number" name="ipk_value" step="0.01" required>
+                    <div>
+                        <label class="block font-bold mb-2 text-slate-200 text-sm">2. Syarat IPK yang diterima:</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <select name="ipk_operator" required class="w-full p-3 bg-slate-900 border border-slate-700 text-white rounded focus:border-cyan-500 outline-none">
+                                <option value="">Pilih Kondisi...</option>
+                                <option value=">=">Lebih dari sama dengan (>=)</option>
+                                <option value="<=">Kurang dari sama dengan (<=)</option>
+                            </select>
+                            <input type="number" name="ipk_value" step="0.01" required class="w-full p-3 bg-slate-900 border border-slate-700 text-white rounded focus:border-cyan-500 outline-none">
+                        </div>
                     </div>
 
-                    <label>3. Syarat Status Mahasiswa:</label>
-                    <div class="radio-group">
-                        <label class="radio-label">
-                            <input type="radio" name="status_mhs" value="Aktif" required> Aktif (On)
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="status_mhs" value="Cuti" required> Tidak Aktif / Cuti (Off)
-                        </label>
+                    <div>
+                        <label class="block font-bold mb-2 text-slate-200 text-sm">3. Syarat Status Mahasiswa:</label>
+                        <div class="flex gap-6 bg-slate-900 p-3 rounded border border-slate-700">
+                            <label class="flex items-center gap-2 cursor-pointer text-sm">
+                                <input type="radio" name="status_mhs" value="Aktif" required class="w-4 h-4 text-cyan-500 bg-slate-800 border-slate-600 focus:ring-cyan-500"> 
+                                Aktif (On)
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer text-sm">
+                                <input type="radio" name="status_mhs" value="Cuti" required class="w-4 h-4 text-cyan-500 bg-slate-800 border-slate-600 focus:ring-cyan-500"> 
+                                Cuti (Off)
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="modal-actions">
-                        <button type="button" id="btn-close-modal" class="btn-secondary">Cancel</button>
-                        <button type="submit" class="btn-primary">Verify Rules</button>
+                    <div class="flex justify-end gap-3 mt-8 pt-4 border-t border-slate-700">
+                        <button type="button" id="btn-close-modal" class="px-5 py-2 rounded text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">Cancel</button>
+                        <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold px-6 py-2 rounded shadow-lg transition-colors">Verify Rules</button>
                     </div>
                 </form>
             </div>
         </div>
 
-        <div id="result-screen" class="modal-overlay hidden">
-            <div class="modal-content result-box">
-                <h2> MISSION COMPLETE </h2>
-                <div id="final-stats"></div>
-                <button type="button" onclick="location.reload()" class="btn-primary">Play Again</button>
+        <div id="result-screen" class="fixed inset-0 bg-black/90 flex justify-center items-center z-50 hidden">
+            <div class="bg-slate-800 p-10 rounded-2xl border-2 border-cyan-500 text-center shadow-[0_0_50px_rgba(6,182,212,0.3)] w-[400px]">
+                <h2 class="text-3xl font-black text-white mb-6 tracking-widest">MISSION COMPLETE</h2>
+                <div id="final-stats" class="text-lg space-y-3 mb-8 text-slate-200">
+                    </div>
+                <button type="button" onclick="location.reload()" class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-bold py-3 px-8 rounded-lg w-full text-lg shadow-lg">
+                    Play Again
+                </button>
             </div>
         </div>
     </div>
     
-        <script type="module" src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>

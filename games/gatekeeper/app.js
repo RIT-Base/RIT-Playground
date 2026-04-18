@@ -1,3 +1,5 @@
+// app.js
+
 const JURUSAN_DATA = [
     { kode: "71", nama: "Ilmu Komunikasi" },
     { kode: "72", nama: "Teknologi Informasi" },
@@ -5,7 +7,7 @@ const JURUSAN_DATA = [
     { kode: "74", nama: "Rekayasa Perangkat Keras" }
 ];
 
-const NAMES = ["Budi Santoso", "Lani Cahya", "Andi Wijaya", "Siti Aminah", "Rizky Pratama", "Dewi Lestari"];
+const NAMES = ["Budi Santoso", "Lani Cahya", "Andi Wijaya", "Siti Aminah", "Rizky Pratama", "Dewi Lestari", "Rendi Maulana", "Nisa Amelia"];
 
 let state = {
     processed: 0,
@@ -20,6 +22,7 @@ function generateStudentData() {
     const years = ["21", "22", "23", "24", "25"];
     const year = years[Math.floor(Math.random() * years.length)];
     
+    // Generate 11-digit NPM: 240 + KodeJur(2) + KodeAng(2) + Seq(4) = 11 digits
     const sequence = Math.floor(1000 + Math.random() * 8999);
     const npm = `240${majorObj.kode}${year}${sequence}`;
     
@@ -45,7 +48,16 @@ function renderCard() {
     document.getElementById('val-npm').innerText = state.currentCard.npm;
     document.getElementById('val-jurusan').innerText = state.currentCard.jurusan;
     document.getElementById('val-ipk').innerText = state.currentCard.ipk;
-    document.getElementById('val-status').innerText = state.currentCard.status;
+    
+    const statusEl = document.getElementById('val-status');
+    statusEl.innerText = state.currentCard.status;
+    
+    // Memberikan warna merah jika status tidak aktif agar lebih terlihat perbedaannya
+    if(state.currentCard.status !== "Aktif") {
+        statusEl.classList.add("text-red-400");
+    } else {
+        statusEl.classList.remove("text-red-400");
+    }
 }
 
 function handleDecision(isApproving) {
@@ -56,7 +68,7 @@ function handleDecision(isApproving) {
 
     const logEntry = {
         npm: state.currentCard.npm,
-        action: isApproving ? "APPROVED" : "REJECTED",
+        action: isApproving ? "APP" : "REJ",
         status: isCorrect ? "CORRECT" : "WRONG",
         className: isCorrect ? "log-success" : "log-error"
     };
@@ -72,9 +84,9 @@ function updateUI() {
     
     historyContainer.innerHTML = state.history.map(item => `
         <div class="log-item ${item.className}">
-            <span>${item.npm}</span>
-            <span>${item.action}</span>
-            <b>${item.status}</b>
+            <span class="font-mono">${item.npm}</span>
+            <span class="font-bold text-xs px-2 py-1 bg-slate-800 rounded">${item.action}</span>
+            <b class="${item.status === 'CORRECT' ? 'text-emerald-400' : 'text-red-400'}">${item.status}</b>
         </div>
     `).join('');
 }
@@ -84,10 +96,15 @@ function updateUI() {
 const guessModal = document.getElementById('modal-overlay');
 const resultScreen = document.getElementById('result-screen');
 
-document.getElementById('btn-guess-trigger').onclick = () => guessModal.classList.remove('hidden');
-document.getElementById('btn-close-modal').onclick = () => guessModal.classList.add('hidden');
+document.getElementById('btn-guess-trigger').addEventListener('click', () => {
+    guessModal.classList.remove('hidden');
+});
 
-document.getElementById('guess-form').onsubmit = (e) => {
+document.getElementById('btn-close-modal').addEventListener('click', () => {
+    guessModal.classList.add('hidden');
+});
+
+document.getElementById('guess-form').addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     
@@ -102,29 +119,38 @@ document.getElementById('guess-form').onsubmit = (e) => {
         guessedJurusan === "72" && 
         guessedAngkatan === "25" &&
         guessedIpkOp === ">=" &&
-        guessedIpkVal === 3 &&  // Cek apakah mahasiswa menebak angka 3 (atau 3.0)
+        guessedIpkVal === 3 &&  // Evaluasi 3 atau 3.0
         guessedStatus === "Aktif"
     );
     
     showFinalResults(isRulesCorrect);
-};
+});
 
 function showFinalResults(isRulesCorrect) {
     guessModal.classList.add('hidden');
     resultScreen.classList.remove('hidden');
     
     const timeSpent = Math.floor((Date.now() - state.startTime) / 1000);
+    const acc = ((state.correctDecisions / state.processed) * 100 || 0).toFixed(1);
     
     document.getElementById('final-stats').innerHTML = `
-        <p>Rule Deduction: <b>${isRulesCorrect ? "SUCCESS ✅" : "FAILED ❌"}</b></p>
-        <p>Total Cards Processed: <b>${state.processed}</b></p>
-        <p>Accuracy: <b>${((state.correctDecisions/state.processed)*100 || 0).toFixed(1)}%</b></p>
-        <p>Time Spent: <b>${timeSpent} seconds</b></p>
+        <div class="p-3 ${isRulesCorrect ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500' : 'bg-red-500/20 text-red-400 border border-red-500'} rounded mb-4">
+            Rule Deduction: <b class="text-xl">${isRulesCorrect ? "SUCCESS" : "FAILED"}</b>
+        </div>
+        <div class="flex justify-between border-b border-slate-700 pb-2">
+            <span>Cards Processed:</span> <b class="text-white">${state.processed}</b>
+        </div>
+        <div class="flex justify-between border-b border-slate-700 pb-2">
+            <span>Accuracy:</span> <b class="${acc > 80 ? 'text-emerald-400' : 'text-yellow-400'}">${acc}%</b>
+        </div>
+        <div class="flex justify-between">
+            <span>Time Spent:</span> <b class="text-white">${timeSpent}s</b>
+        </div>
     `;
 }
 
 // --- INIT ---
-document.getElementById('btn-approve').onclick = () => handleDecision(true);
-document.getElementById('btn-reject').onclick = () => handleDecision(false);
+document.getElementById('btn-approve').addEventListener('click', () => handleDecision(true));
+document.getElementById('btn-reject').addEventListener('click', () => handleDecision(false));
 
 renderCard();
