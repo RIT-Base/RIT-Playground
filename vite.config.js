@@ -12,6 +12,7 @@ export default defineConfig({
         site_inspectore: resolve(__dirname, 'games/site_inspector/index.html'),
         university_life: resolve(__dirname, 'games/university_life/index.html'),
         tos_nightmare: resolve(__dirname, 'games/tos_nightmare/index.html'),
+        gatekeeper: resolve(__dirname, 'games/gatekeeper/index.html'),
       },
     },
   },
