@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatekeeper - PSDBD Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="header-content">
+                <h1>GATEKEEPER <span class="subtitle">v1.0 - Data Validator</span></h1>
+                <div class="stats">
+                    <div class="stat-box">Processed: <span id="count">0</span></div>
+                    <button id="btn-guess-trigger" class="btn-primary">I Know the Rules!</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="inspection-gate">
+                <div id="card-container">
+                    <div class="document-tag">INCOMING DATA</div>
+                    <div class="student-card" id="active-card">
+                        <div class="card-photo"></div>
+                        <div class="card-info">
+                            <div class="info-group">
+                                <label>Full Name</label>
+                                <div id="val-nama" class="info-text">-</div>
+                            </div>
+                            <div class="info-group">
+                                <label>Student ID (NPM)</label>
+                                <div id="val-npm" class="info-text">-</div>
+                            </div>
+                            <div class="info-group">
+                                <label>Major</label>
+                                <div id="val-jurusan" class="info-text">-</div>
+                            </div>
+                            <div class="grid-2">
+                                <div class="info-group">
+                                    <label>GPA (IPK)</label>
+                                    <div id="val-ipk" class="info-text">-</div>
+                                </div>
+                                <div class="info-group">
+                                    <label>Status</label>
+                                    <div id="val-status" class="info-text">-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="btn-reject" class="control-btn reject">REJECT</button>
+                    <button id="btn-approve" class="control-btn approve">APPROVE</button>
+                </div>
+            </section>
+
+            <section class="system-logs">
+                <h3>System Transaction History</h3>
+                <div id="history-list">
+                    <div class="empty-state">No transactions yet. Start processing data.</div>
+                </div>
+            </section>
+        </main>
+
+        <div id="modal-overlay" class="modal-overlay hidden">
+            <div class="modal-content">
+                <h2>Final Deduction: Entry Policy</h2>
+                <p>Berdasarkan history, tentukan kriteria validasi database yang benar:</p>
+                <form id="guess-form">
+                    <label>1. Kode Jurusan & Angkatan mana yang valid di NPM?</label>
+                    <div class="input-row">
+                        <select name="jurusan" required>
+                            <option value="">Pilih Jurusan...</option>
+                            <option value="71">71 (Ilmu Komunikasi)</option>
+                            <option value="72">72 (Teknologi Informasi)</option>
+                            <option value="73">73 (RPL)</option>
+                            <option value="74">74 (RSK)</option>
+                        </select>
+                        <select name="angkatan" required>
+                            <option value="">Angkatan...</option>
+                            <option value="21">2021</option>
+                            <option value="23">2023</option>
+                            <option value="25">2025</option>
+                        </select>
+                    </div>
+
+                    <label>2. Apa syarat IPK & Status agar data masuk database?</label>
+                    <textarea name="requirements" placeholder="Contoh: IPK min 3.0 dan Status Aktif" required></textarea>
+
+                    <div class="modal-actions">
+                        <button type="button" id="btn-close-modal" class="btn-secondary">Cancel</button>
+                        <button type="submit" class="btn-primary">Verify Rules</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="result-screen" class="modal-overlay hidden">
+            <div class="modal-content result-box">
+                <h2> MISSION COMPLETE </h2>
+                <div id="final-stats"></div>
+                <button onclick="location.reload()" class="btn-primary">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
