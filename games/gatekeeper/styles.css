@@ -41,13 +41,7 @@ main {
     padding: 0 1rem;
 }
 
-/* Student Card */
-.inspection-gate {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
+.inspection-gate { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
 
 .student-card {
     background: var(--card-bg);
@@ -69,21 +63,12 @@ main {
     margin-bottom: -10px;
 }
 
-.card-photo {
-    width: 80px;
-    height: 80px;
-    background: #334155;
-    margin-bottom: 1rem;
-    border-radius: 4px;
-}
-
+.card-photo { width: 80px; height: 80px; background: #334155; margin-bottom: 1rem; border-radius: 4px; }
 .info-group { margin-bottom: 0.8rem; }
 .info-group label { display: block; font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; }
 .info-text { font-size: 1.1rem; font-weight: 500; border-bottom: 1px solid #334155; padding-bottom: 2px; }
-
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-/* Buttons */
 .controls { display: flex; gap: 1rem; }
 .control-btn {
     padding: 1rem 2.5rem;
@@ -97,7 +82,6 @@ main {
 .reject { background: var(--danger); color: white; }
 .approve { background: var(--success); color: white; }
 
-/* History Log */
 .system-logs {
     background: #020617;
     border-radius: 8px;
@@ -113,19 +97,14 @@ main {
     border-bottom: 1px solid #1e293b;
     font-size: 0.85rem;
 }
-
 .log-success { border-left: 4px solid var(--success); background: rgba(16, 185, 129, 0.1); }
 .log-error { border-left: 4px solid var(--danger); background: rgba(239, 68, 68, 0.1); }
 
-/* Modal */
 .hidden { display: none !important; }
 .modal-overlay {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; justify-content: center; align-items: center;
     z-index: 100;
 }
 
@@ -136,18 +115,22 @@ main {
     width: 450px;
     border: 1px solid var(--primary);
 }
-
 .modal-content label { display: block; margin: 1rem 0 0.5rem; font-weight: bold; }
 .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-select, textarea, input {
+/* Tambahan styling untuk input form baru */
+select, input[type="number"], input[type="text"] {
     width: 100%;
     padding: 0.8rem;
     background: #0f172a;
     border: 1px solid #334155;
     color: white;
     border-radius: 4px;
+    box-sizing: border-box;
 }
+
+.radio-group { display: flex; gap: 1.5rem; background: #0f172a; padding: 0.8rem; border-radius: 4px; border: 1px solid #334155; }
+.radio-label { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: normal !important; margin: 0 !important; }
 
 .modal-actions { display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1.5rem; }
 .btn-primary { background: var(--primary); border: none; padding: 0.8rem 1.5rem; border-radius: 4px; cursor: pointer; color: var(--bg-color); font-weight: bold;}

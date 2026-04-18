@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gatekeeper - PSDBD Edition</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="app">
@@ -87,8 +87,25 @@
                         </select>
                     </div>
 
-                    <label>2. Apa syarat IPK & Status agar data masuk database?</label>
-                    <textarea name="requirements" placeholder="Contoh: IPK min 3.0 dan Status Aktif" required></textarea>
+                    <label>2. Syarat IPK yang diterima:</label>
+                    <div class="input-row">
+                        <select name="ipk_operator" required>
+                            <option value="">Pilih Kondisi...</option>
+                            <option value=">=">Lebih dari atau sama dengan (>=)</option>
+                            <option value="<=">Kurang dari atau sama dengan (<=)</option>
+                        </select>
+                        <input type="number" name="ipk_value" step="0.01" required>
+                    </div>
+
+                    <label>3. Syarat Status Mahasiswa:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="status_mhs" value="Aktif" required> Aktif (On)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="status_mhs" value="Cuti" required> Tidak Aktif / Cuti (Off)
+                        </label>
+                    </div>
 
                     <div class="modal-actions">
                         <button type="button" id="btn-close-modal" class="btn-secondary">Cancel</button>
@@ -102,10 +119,11 @@
             <div class="modal-content result-box">
                 <h2> MISSION COMPLETE </h2>
                 <div id="final-stats"></div>
-                <button onclick="location.reload()" class="btn-primary">Play Again</button>
+                <button type="button" onclick="location.reload()" class="btn-primary">Play Again</button>
             </div>
         </div>
     </div>
-    <script src="app.js"></script>
+    
+    <script src="./app.js"></script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-// Konfigurasi Jurusan sesuai permintaan
 const JURUSAN_DATA = [
     { kode: "71", nama: "Ilmu Komunikasi" },
     { kode: "72", nama: "Teknologi Informasi" },
@@ -16,15 +15,11 @@ let state = {
     startTime: Date.now()
 };
 
-// --- LOGIKA GAME ---
-
 function generateStudentData() {
-    // Randomize criteria
     const majorObj = JURUSAN_DATA[Math.floor(Math.random() * JURUSAN_DATA.length)];
     const years = ["21", "22", "23", "24", "25"];
     const year = years[Math.floor(Math.random() * years.length)];
     
-    // Generate 11-digit NPM: 240 + KodeJur(2) + KodeAng(2) + Seq(4) = 11 digits
     const sequence = Math.floor(1000 + Math.random() * 8999);
     const npm = `240${majorObj.kode}${year}${sequence}`;
     
@@ -33,12 +28,12 @@ function generateStudentData() {
     const status = statuses[Math.floor(Math.random() * statuses.length)];
     const name = NAMES[Math.floor(Math.random() * NAMES.length)];
 
-    // Hidden Validation Logic (The "Backend" Rules)
+    // Backend Rule Asli: TI(72), Angkatan 25, IPK >= 3.0, Aktif
     const isValid = (
-        majorObj.kode === "72" &&      // Harus TI
-        year === "25" &&               // Harus Angkatan 25
-        parseFloat(ipk) >= 3.00 &&     // IPK minimal 3.00
-        status === "Aktif"             // Harus Aktif
+        majorObj.kode === "72" &&      
+        year === "25" &&               
+        parseFloat(ipk) >= 3.00 &&     
+        status === "Aktif"             
     );
 
     return { name, npm, jurusan: majorObj.nama, ipk, status, isValid };
@@ -98,9 +93,18 @@ document.getElementById('guess-form').onsubmit = (e) => {
     
     const guessedJurusan = formData.get('jurusan');
     const guessedAngkatan = formData.get('angkatan');
+    const guessedIpkOp = formData.get('ipk_operator');
+    const guessedIpkVal = parseFloat(formData.get('ipk_value'));
+    const guessedStatus = formData.get('status_mhs');
     
-    // Simple verification for the demo
-    const isRulesCorrect = (guessedJurusan === "72" && guessedAngkatan === "25");
+    // Verifikasi jawaban tebakan mahasiswa
+    const isRulesCorrect = (
+        guessedJurusan === "72" && 
+        guessedAngkatan === "25" &&
+        guessedIpkOp === ">=" &&
+        guessedIpkVal === 3 &&  // Cek apakah mahasiswa menebak angka 3 (atau 3.0)
+        guessedStatus === "Aktif"
+    );
     
     showFinalResults(isRulesCorrect);
 };
