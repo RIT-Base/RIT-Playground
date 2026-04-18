@@ -1,32 +1,21 @@
 /* style.css */
 
-/* Sebagian besar styling sudah ditangani oleh Tailwind CSS.
-  CSS ini hanya untuk custom utility tambahan pada elemen history log.
-*/
-
-.log-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.75rem 1rem;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-    border-bottom: 1px solid #1e293b;
+/* Styling spesifik untuk box history log terbaru */
+.log-card {
+    transition: all 0.2s ease-in-out;
 }
 
 .log-success { 
-    border-left: 4px solid #10b981; 
+    border-left-color: #10b981; /* Warna hijau emerald */
     background: rgba(16, 185, 129, 0.1); 
-    color: #e2e8f0;
 }
 
 .log-error { 
-    border-left: 4px solid #ef4444; 
+    border-left-color: #ef4444; /* Warna merah red */
     background: rgba(239, 68, 68, 0.1); 
-    color: #e2e8f0;
 }
 
-/* Custom Scrollbar untuk history list agar tampil lebih rapi */
+/* Custom Scrollbar untuk history list agar tampil rapi */
 #history-list::-webkit-scrollbar {
     width: 6px;
 }
